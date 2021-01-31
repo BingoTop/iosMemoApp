@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:gravity="center_vertical"
+    android:background="#eeeeee"
+    android:weightSum="1">
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start">
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@={myViewModel.memoDesc}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.275" />
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:id="@+id/created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/item_text"
+            app:layout_constraintTop_toBottomOf="@+id/item_text" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/drag_icon"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/id_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="메모 아이디"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/created_at"
+        app:layout_constraintTop_toTopOf="@+id/created_at"
+        />
+
+
+
+
+
+</LinearLayout>

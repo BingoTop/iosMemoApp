@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/otherBtn"
+        android:icon="@drawable/ic_baseline_more_horiz_24"
+        android:title="다른 형태로 메모 보기"
+        app:showAsAction="collapseActionView"
+        />
+</menu>
